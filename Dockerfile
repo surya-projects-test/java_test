@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copy the executable JAR file from the target directory into the container
-COPY target/test-0.0.1-SNAPSHOT.jar /app/test.jar
+COPY target/my-test-app.jar /app/test.jar
 
 # Expose port 8080 for the Spring Boot application
 EXPOSE 8080
