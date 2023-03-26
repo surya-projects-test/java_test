@@ -19,7 +19,7 @@ node('node1') {
     // Check if Docker is already installed
     def dockerInstalled = sh(script: "which docker", returnStatus: true) == 0
     
-    // Console of Installing Docker in node if it's not already installed
+    // failing pipeline if Docker is not installed
     if (!dockerInstalled) {
         stage('Handling Docker installation error') {
             error "Docker is not installed on this machine."
